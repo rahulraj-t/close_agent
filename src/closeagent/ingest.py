@@ -1,5 +1,3 @@
-"""Deterministic intake gate: load COA / TB / FX, normalise, and RECORD every defect.
-Nothing is silently fixed. Every TB balance keeps the CSV row numbers it came from (lineage)."""
 import csv
 from collections import defaultdict
 from difflib import SequenceMatcher
