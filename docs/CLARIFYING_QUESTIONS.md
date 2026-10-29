@@ -1,4 +1,4 @@
-# Clarifying questions (max 3 allowed; ranked by how much the answer changes the design)
+# Clarifying questions
 
 **Q1. FX basis.** Are the EUR and GBP rows in `trial_balance.csv` in local currency or already translated to USD? Untranslated the TB is off by -4,800; translated at the supplied rates it is off by ~+182k, and GBP has no period-end rate. Which reading is correct, and if local, what rate and policy (closing for BS, average for P&L, historical for equity) should apply to GBP?
 
