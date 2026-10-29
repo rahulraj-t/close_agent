@@ -4,7 +4,7 @@
 JE-001 - Accrue Q4 bonus pool: Posted. No problems found.
   Effect: moves 850,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
 ```
 JE-002 - Reclassify marketing spend wrongly booked to T&E: NOT posted. It is held back until the problem below is fixed.
@@ -13,7 +13,7 @@ JE-002 - Reclassify marketing spend wrongly booked to T&E: NOT posted. It is hel
       option: Debit side should total 25,000.00 (reduce the larger side)
       option: A third line of 3,500.00 is missing; ask the preparer which account
 ```
-_(explanation source: template)_
+
 
 ```
 JE-003 - FX revaluation of EUR cash balance to period-end rate: Posted, but please review the flag(s) below.
@@ -23,13 +23,12 @@ JE-003 - FX revaluation of EUR cash balance to period-end rate: Posted, but plea
       option: Obtain GBP period-end rate and revalue both currencies
   Effect: moves 11,200.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
 
 ```
 JE-004 - Bad debt provision top-up: Posted. No problems found.
   Effect: moves 45,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
 ```
 JE-005 - Reclass conference travel from old code: NOT posted. It is held back until the problem below is fixed.
@@ -37,20 +36,20 @@ JE-005 - Reclass conference travel from old code: NOT posted. It is held back un
       option: Use existing 6310 Travel and Entertainment (heuristic score 0.61) - note: may make the entry a no-op if it is already the other leg
       option: Request a COA change to create 6315 (needs owner approval)
 ```
-_(explanation source: template)_
+
 
 ```
 JE-006 - Depreciation catch-up — Q4: Posted, but please review the flag(s) below.
   - Before this entry, accumulated depreciation already grew by 850,000.00 since the prior period, exactly equal to booked depreciation expense (850,000.00). This 215,000.00 'catch-up' therefore sits on top of a complete quarter (25.3% extra). Confirm against the fixed-asset register that it is not a duplicate.
   Effect: moves 215,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
 ```
 JE-007 - Deferred tax true-up: Posted. No problems found.
   Effect: moves 38,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
 ```
 JE-008 - Intercompany settlement — UK sub: NOT posted. It is held back until the problem below is fixed.
@@ -58,17 +57,17 @@ JE-008 - Intercompany settlement — UK sub: NOT posted. It is held back until t
       option: Confirm the intended business event and whether the entry should have any accounting effect.
       option: If this is an intercompany settlement, obtain the counterparty/entity evidence and identify the actual settlement account before resubmitting.
 ```
-_(explanation source: template)_
+
 
 ```
 JE-009 - Accrue legal fees for ongoing litigation: Posted. No problems found.
   Effect: moves 75,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
 ```
 JE-010 - Reclass long-term debt current portion: Posted. No problems found.
   Effect: moves 200,000.00 between accounts (debits = credits).
 ```
-_(explanation source: template)_
+
 
