@@ -1,5 +1,4 @@
-# close-agent: adjustments agent + intake gate + reconciliation (one slice)
-
+# close-agent: adjustments agent + intake gate + reconciliation 
 Take-home prototype for "agentic financial-statement generation". Start with `docs/ARCHITECTURE.md` (main artifact), then `docs/REFLECTION.md` and `docs/CLARIFYING_QUESTIONS.md`.
 
 ## Run
