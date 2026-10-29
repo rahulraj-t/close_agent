@@ -1,0 +1,1041 @@
+{
+  "headline": {
+    "net_income_pre": "6006500.00",
+    "net_income_post": "4794700.00",
+    "net_income_change": "-1211800.00",
+    "tb_imbalance_pre": "-4800.00",
+    "tb_imbalance_post": "-4800.00",
+    "quarantined_ids": [
+      "JE-002",
+      "JE-005",
+      "JE-008"
+    ]
+  },
+  "lines": [
+    {
+      "account": "1110",
+      "name": "Cash and Cash Equivalents",
+      "pre": "5487700.00",
+      "delta": "11200.00",
+      "post": "5498900.00",
+      "tb_lines": [
+        {
+          "tb_line": 2,
+          "ccy": "USD",
+          "signed": "4250000.00"
+        },
+        {
+          "tb_line": 3,
+          "ccy": "EUR",
+          "signed": "825400.00"
+        },
+        {
+          "tb_line": 4,
+          "ccy": "GBP",
+          "signed": "412300.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-003",
+          "line": 1,
+          "signed": "11200.00",
+          "memo": "EUR cash uplift",
+          "source": "FX reval calc",
+          "status": "ACCEPTED_WITH_FLAGS"
+        }
+      ]
+    },
+    {
+      "account": "1120",
+      "name": "Accounts Receivable",
+      "pre": "6180500.00",
+      "delta": "0",
+      "post": "6180500.00",
+      "tb_lines": [
+        {
+          "tb_line": 5,
+          "ccy": "USD",
+          "signed": "6180500.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1121",
+      "name": "Allowance for Doubtful Accounts",
+      "pre": "-185000.00",
+      "delta": "-45000.00",
+      "post": "-230000.00",
+      "tb_lines": [
+        {
+          "tb_line": 6,
+          "ccy": "USD",
+          "signed": "-185000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-004",
+          "line": 2,
+          "signed": "-45000.00",
+          "memo": "Increase allowance",
+          "source": "AR aging review",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "1130",
+      "name": "Inventory - Raw Materials",
+      "pre": "1920000.00",
+      "delta": "0",
+      "post": "1920000.00",
+      "tb_lines": [
+        {
+          "tb_line": 7,
+          "ccy": "USD",
+          "signed": "1920000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1131",
+      "name": "Inventory - Finished Goods",
+      "pre": "3410000.00",
+      "delta": "0",
+      "post": "3410000.00",
+      "tb_lines": [
+        {
+          "tb_line": 8,
+          "ccy": "USD",
+          "signed": "3410000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1140",
+      "name": "Prepaid Expenses",
+      "pre": "245000.00",
+      "delta": "0",
+      "post": "245000.00",
+      "tb_lines": [
+        {
+          "tb_line": 9,
+          "ccy": "USD",
+          "signed": "245000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1150",
+      "name": "Other Current Assets",
+      "pre": "78400.00",
+      "delta": "0",
+      "post": "78400.00",
+      "tb_lines": [
+        {
+          "tb_line": 10,
+          "ccy": "USD",
+          "signed": "78400.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1210",
+      "name": "Property, Plant & Equipment - Cost",
+      "pre": "17007700.00",
+      "delta": "0",
+      "post": "17007700.00",
+      "tb_lines": [
+        {
+          "tb_line": 11,
+          "ccy": "USD",
+          "signed": "17007700.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1211",
+      "name": "Accumulated Depreciation - PPE",
+      "pre": "-4200000.00",
+      "delta": "-215000.00",
+      "post": "-4415000.00",
+      "tb_lines": [
+        {
+          "tb_line": 12,
+          "ccy": "USD",
+          "signed": "-4200000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-006",
+          "line": 2,
+          "signed": "-215000.00",
+          "memo": "Accum dep",
+          "source": "Fixed asset register",
+          "status": "ACCEPTED_WITH_FLAGS"
+        }
+      ]
+    },
+    {
+      "account": "1220",
+      "name": "Intangible Assets - Cost",
+      "pre": "2800000.00",
+      "delta": "0",
+      "post": "2800000.00",
+      "tb_lines": [
+        {
+          "tb_line": 13,
+          "ccy": "USD",
+          "signed": "2800000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1221",
+      "name": "Accumulated Amortization",
+      "pre": "-980000.00",
+      "delta": "0",
+      "post": "-980000.00",
+      "tb_lines": [
+        {
+          "tb_line": 14,
+          "ccy": "USD",
+          "signed": "-980000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1230",
+      "name": "Goodwill",
+      "pre": "3500000.00",
+      "delta": "0",
+      "post": "3500000.00",
+      "tb_lines": [
+        {
+          "tb_line": 15,
+          "ccy": "USD",
+          "signed": "3500000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1240",
+      "name": "Long-term Investments",
+      "pre": "750000.00",
+      "delta": "0",
+      "post": "750000.00",
+      "tb_lines": [
+        {
+          "tb_line": 16,
+          "ccy": "USD",
+          "signed": "750000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "1250",
+      "name": "Deferred Tax Asset",
+      "pre": "320000.00",
+      "delta": "-38000.00",
+      "post": "282000.00",
+      "tb_lines": [
+        {
+          "tb_line": 17,
+          "ccy": "USD",
+          "signed": "320000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-007",
+          "line": 2,
+          "signed": "-38000.00",
+          "memo": "Reduce DTA",
+          "source": "Tax provision memo",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "2110",
+      "name": "Accounts Payable",
+      "pre": "-2840000.00",
+      "delta": "0",
+      "post": "-2840000.00",
+      "tb_lines": [
+        {
+          "tb_line": 18,
+          "ccy": "USD",
+          "signed": "-2840000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2120",
+      "name": "Accrued Expenses",
+      "pre": "-1150000.00",
+      "delta": "-925000.00",
+      "post": "-2075000.00",
+      "tb_lines": [
+        {
+          "tb_line": 19,
+          "ccy": "USD",
+          "signed": "-1150000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-001",
+          "line": 2,
+          "signed": "-850000.00",
+          "memo": "Accrual offset",
+          "source": "Finance team \u2014 bonus accrual workbook v3",
+          "status": "ACCEPTED"
+        },
+        {
+          "je": "JE-009",
+          "line": 2,
+          "signed": "-75000.00",
+          "memo": "Accrued legal",
+          "source": "Legal memo dated 2024-12-29",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "2130",
+      "name": "Short-term Debt",
+      "pre": "-1500000.00",
+      "delta": "0",
+      "post": "-1500000.00",
+      "tb_lines": [
+        {
+          "tb_line": 20,
+          "ccy": "USD",
+          "signed": "-1500000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2140",
+      "name": "Current Portion of Long-term Debt",
+      "pre": "-800000.00",
+      "delta": "-200000.00",
+      "post": "-1000000.00",
+      "tb_lines": [
+        {
+          "tb_line": 21,
+          "ccy": "USD",
+          "signed": "-800000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-010",
+          "line": 2,
+          "signed": "-200000.00",
+          "memo": "Into current",
+          "source": "Treasury schedule",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "2150",
+      "name": "Income Tax Payable",
+      "pre": "-420000.00",
+      "delta": "0",
+      "post": "-420000.00",
+      "tb_lines": [
+        {
+          "tb_line": 22,
+          "ccy": "USD",
+          "signed": "-420000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2160",
+      "name": "Deferred Revenue",
+      "pre": "-680000.00",
+      "delta": "0",
+      "post": "-680000.00",
+      "tb_lines": [
+        {
+          "tb_line": 23,
+          "ccy": "USD",
+          "signed": "-680000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2170",
+      "name": "Intercompany Payable",
+      "pre": "-1240000.00",
+      "delta": "0",
+      "post": "-1240000.00",
+      "tb_lines": [
+        {
+          "tb_line": 24,
+          "ccy": "USD",
+          "signed": "-1240000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2210",
+      "name": "Long-term Debt",
+      "pre": "-6500000.00",
+      "delta": "200000.00",
+      "post": "-6300000.00",
+      "tb_lines": [
+        {
+          "tb_line": 25,
+          "ccy": "USD",
+          "signed": "-6500000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-010",
+          "line": 1,
+          "signed": "200000.00",
+          "memo": "Out of LT debt",
+          "source": "Treasury schedule",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "2220",
+      "name": "Lease Liability - Long-term",
+      "pre": "-1320000.00",
+      "delta": "0",
+      "post": "-1320000.00",
+      "tb_lines": [
+        {
+          "tb_line": 26,
+          "ccy": "USD",
+          "signed": "-1320000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2230",
+      "name": "Deferred Tax Liability",
+      "pre": "-485000.00",
+      "delta": "0",
+      "post": "-485000.00",
+      "tb_lines": [
+        {
+          "tb_line": 27,
+          "ccy": "USD",
+          "signed": "-485000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "2240",
+      "name": "Pension Obligations",
+      "pre": "-910000.00",
+      "delta": "0",
+      "post": "-910000.00",
+      "tb_lines": [
+        {
+          "tb_line": 28,
+          "ccy": "USD",
+          "signed": "-910000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "3100",
+      "name": "Common Stock",
+      "pre": "-1000000.00",
+      "delta": "0",
+      "post": "-1000000.00",
+      "tb_lines": [
+        {
+          "tb_line": 29,
+          "ccy": "USD",
+          "signed": "-1000000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "3110",
+      "name": "Additional Paid-in Capital",
+      "pre": "-4500000.00",
+      "delta": "0",
+      "post": "-4500000.00",
+      "tb_lines": [
+        {
+          "tb_line": 30,
+          "ccy": "USD",
+          "signed": "-4500000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "3200",
+      "name": "Retained Earnings",
+      "pre": "-7240000.00",
+      "delta": "0",
+      "post": "-7240000.00",
+      "tb_lines": [
+        {
+          "tb_line": 31,
+          "ccy": "USD",
+          "signed": "-7240000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "3310",
+      "name": "FX Translation Reserve",
+      "pre": "-180000.00",
+      "delta": "0",
+      "post": "-180000.00",
+      "tb_lines": [
+        {
+          "tb_line": 32,
+          "ccy": "USD",
+          "signed": "-180000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "3400",
+      "name": "Treasury Stock",
+      "pre": "420000.00",
+      "delta": "0",
+      "post": "420000.00",
+      "tb_lines": [
+        {
+          "tb_line": 33,
+          "ccy": "USD",
+          "signed": "420000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "4100",
+      "name": "Product Revenue",
+      "pre": "-28500000.00",
+      "delta": "0",
+      "post": "-28500000.00",
+      "tb_lines": [
+        {
+          "tb_line": 34,
+          "ccy": "USD",
+          "signed": "-28500000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "4110",
+      "name": "Service Revenue",
+      "pre": "-6200000.00",
+      "delta": "0",
+      "post": "-6200000.00",
+      "tb_lines": [
+        {
+          "tb_line": 35,
+          "ccy": "USD",
+          "signed": "-6200000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "4200",
+      "name": "Sales Returns and Allowances",
+      "pre": "340000.00",
+      "delta": "0",
+      "post": "340000.00",
+      "tb_lines": [
+        {
+          "tb_line": 36,
+          "ccy": "USD",
+          "signed": "340000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "4300",
+      "name": "Other Operating Revenue",
+      "pre": "-125000.00",
+      "delta": "0",
+      "post": "-125000.00",
+      "tb_lines": [
+        {
+          "tb_line": 37,
+          "ccy": "USD",
+          "signed": "-125000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "5100",
+      "name": "COGS - Materials",
+      "pre": "9800000.00",
+      "delta": "0",
+      "post": "9800000.00",
+      "tb_lines": [
+        {
+          "tb_line": 38,
+          "ccy": "USD",
+          "signed": "9800000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "5110",
+      "name": "COGS - Direct Labor",
+      "pre": "4200000.00",
+      "delta": "0",
+      "post": "4200000.00",
+      "tb_lines": [
+        {
+          "tb_line": 39,
+          "ccy": "USD",
+          "signed": "4200000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "5120",
+      "name": "COGS - Manufacturing Overhead",
+      "pre": "2650000.00",
+      "delta": "0",
+      "post": "2650000.00",
+      "tb_lines": [
+        {
+          "tb_line": 40,
+          "ccy": "USD",
+          "signed": "2650000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6100",
+      "name": "Salaries and Wages",
+      "pre": "5400000.00",
+      "delta": "850000.00",
+      "post": "6250000.00",
+      "tb_lines": [
+        {
+          "tb_line": 41,
+          "ccy": "USD",
+          "signed": "5400000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-001",
+          "line": 1,
+          "signed": "850000.00",
+          "memo": "Bonus accrual",
+          "source": "Finance team \u2014 bonus accrual workbook v3",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "6110",
+      "name": "Employee Benefits",
+      "pre": "920000.00",
+      "delta": "0",
+      "post": "920000.00",
+      "tb_lines": [
+        {
+          "tb_line": 42,
+          "ccy": "USD",
+          "signed": "920000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6120",
+      "name": "Payroll Taxes",
+      "pre": "410000.00",
+      "delta": "0",
+      "post": "410000.00",
+      "tb_lines": [
+        {
+          "tb_line": 43,
+          "ccy": "USD",
+          "signed": "410000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6200",
+      "name": "Rent Expense",
+      "pre": "480000.00",
+      "delta": "0",
+      "post": "480000.00",
+      "tb_lines": [
+        {
+          "tb_line": 44,
+          "ccy": "USD",
+          "signed": "480000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6210",
+      "name": "Utilities",
+      "pre": "115000.00",
+      "delta": "0",
+      "post": "115000.00",
+      "tb_lines": [
+        {
+          "tb_line": 45,
+          "ccy": "USD",
+          "signed": "115000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6220",
+      "name": "Office Supplies",
+      "pre": "62000.00",
+      "delta": "0",
+      "post": "62000.00",
+      "tb_lines": [
+        {
+          "tb_line": 46,
+          "ccy": "USD",
+          "signed": "62000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6300",
+      "name": "Marketing and Advertising",
+      "pre": "980000.00",
+      "delta": "0",
+      "post": "980000.00",
+      "tb_lines": [
+        {
+          "tb_line": 47,
+          "ccy": "USD",
+          "signed": "980000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6310",
+      "name": "Travel and Entertainment",
+      "pre": "283500.00",
+      "delta": "0",
+      "post": "283500.00",
+      "tb_lines": [
+        {
+          "tb_line": 48,
+          "ccy": "USD",
+          "signed": "245000.00"
+        },
+        {
+          "tb_line": 49,
+          "ccy": "USD",
+          "signed": "38500.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6400",
+      "name": "Professional Fees",
+      "pre": "520000.00",
+      "delta": "75000.00",
+      "post": "595000.00",
+      "tb_lines": [
+        {
+          "tb_line": 50,
+          "ccy": "USD",
+          "signed": "520000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-009",
+          "line": 1,
+          "signed": "75000.00",
+          "memo": "Legal accrual",
+          "source": "Legal memo dated 2024-12-29",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "6410",
+      "name": "Insurance",
+      "pre": "180000.00",
+      "delta": "0",
+      "post": "180000.00",
+      "tb_lines": [
+        {
+          "tb_line": 51,
+          "ccy": "USD",
+          "signed": "180000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6500",
+      "name": "Depreciation Expense",
+      "pre": "850000.00",
+      "delta": "215000.00",
+      "post": "1065000.00",
+      "tb_lines": [
+        {
+          "tb_line": 52,
+          "ccy": "USD",
+          "signed": "850000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-006",
+          "line": 1,
+          "signed": "215000.00",
+          "memo": "Q4 dep",
+          "source": "Fixed asset register",
+          "status": "ACCEPTED_WITH_FLAGS"
+        }
+      ]
+    },
+    {
+      "account": "6510",
+      "name": "Amortization Expense",
+      "pre": "220000.00",
+      "delta": "0",
+      "post": "220000.00",
+      "tb_lines": [
+        {
+          "tb_line": 53,
+          "ccy": "USD",
+          "signed": "220000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "6600",
+      "name": "Bad Debt Expense",
+      "pre": "95000.00",
+      "delta": "45000.00",
+      "post": "140000.00",
+      "tb_lines": [
+        {
+          "tb_line": 54,
+          "ccy": "USD",
+          "signed": "95000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-004",
+          "line": 1,
+          "signed": "45000.00",
+          "memo": "Top-up reserve",
+          "source": "AR aging review",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "6900",
+      "name": "Other Operating Expenses",
+      "pre": "140000.00",
+      "delta": "0",
+      "post": "140000.00",
+      "tb_lines": [
+        {
+          "tb_line": 55,
+          "ccy": "USD",
+          "signed": "140000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "7100",
+      "name": "Interest Income",
+      "pre": "-62000.00",
+      "delta": "0",
+      "post": "-62000.00",
+      "tb_lines": [
+        {
+          "tb_line": 56,
+          "ccy": "USD",
+          "signed": "-62000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "7200",
+      "name": "Interest Expense",
+      "pre": "410000.00",
+      "delta": "0",
+      "post": "410000.00",
+      "tb_lines": [
+        {
+          "tb_line": 57,
+          "ccy": "USD",
+          "signed": "410000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "7300",
+      "name": "FX Gain/Loss - Realized",
+      "pre": "85000.00",
+      "delta": "0",
+      "post": "85000.00",
+      "tb_lines": [
+        {
+          "tb_line": 58,
+          "ccy": "USD",
+          "signed": "85000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "7310",
+      "name": "FX Gain/Loss - Unrealized",
+      "pre": "-42000.00",
+      "delta": "-11200.00",
+      "post": "-53200.00",
+      "tb_lines": [
+        {
+          "tb_line": 59,
+          "ccy": "USD",
+          "signed": "-42000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-003",
+          "line": 2,
+          "signed": "-11200.00",
+          "memo": "Unrealized FX gain",
+          "source": "FX reval calc",
+          "status": "ACCEPTED_WITH_FLAGS"
+        }
+      ]
+    },
+    {
+      "account": "7400",
+      "name": "Gain/Loss on Disposal of Assets",
+      "pre": "-18000.00",
+      "delta": "0",
+      "post": "-18000.00",
+      "tb_lines": [
+        {
+          "tb_line": 60,
+          "ccy": "USD",
+          "signed": "-18000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "8100",
+      "name": "Current Tax Expense",
+      "pre": "680000.00",
+      "delta": "0",
+      "post": "680000.00",
+      "tb_lines": [
+        {
+          "tb_line": 61,
+          "ccy": "USD",
+          "signed": "680000.00"
+        }
+      ],
+      "adjustments": []
+    },
+    {
+      "account": "8200",
+      "name": "Deferred Tax Expense",
+      "pre": "120000.00",
+      "delta": "38000.00",
+      "post": "158000.00",
+      "tb_lines": [
+        {
+          "tb_line": 62,
+          "ccy": "USD",
+          "signed": "120000.00"
+        }
+      ],
+      "adjustments": [
+        {
+          "je": "JE-007",
+          "line": 1,
+          "signed": "38000.00",
+          "memo": "DTA reduction",
+          "source": "Tax provision memo",
+          "status": "ACCEPTED"
+        }
+      ]
+    },
+    {
+      "account": "9999",
+      "name": "NOT IN COA",
+      "pre": "12400.00",
+      "delta": "0",
+      "post": "12400.00",
+      "tb_lines": [
+        {
+          "tb_line": 63,
+          "ccy": "USD",
+          "signed": "12400.00"
+        }
+      ],
+      "adjustments": []
+    }
+  ]
+}

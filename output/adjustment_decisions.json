@@ -1,0 +1,343 @@
+[
+  {
+    "id": "JE-001",
+    "description": "Accrue Q4 bonus pool",
+    "source": "Finance team \u2014 bonus accrual workbook v3",
+    "date": "2024-12-31",
+    "status": "ACCEPTED",
+    "debits": "850000.00",
+    "credits": "850000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6100",
+        "debit": "850000.00",
+        "credit": "0.00",
+        "memo": "Bonus accrual"
+      },
+      {
+        "idx": 1,
+        "account": "2120",
+        "debit": "0.00",
+        "credit": "850000.00",
+        "memo": "Accrual offset"
+      }
+    ],
+    "findings": []
+  },
+  {
+    "id": "JE-002",
+    "description": "Reclassify marketing spend wrongly booked to T&E",
+    "source": "Controller note 2024-12-28",
+    "date": "2024-12-28",
+    "status": "QUARANTINED",
+    "debits": "28500.00",
+    "credits": "25000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6300",
+        "debit": "28500.00",
+        "credit": "0.00",
+        "memo": "Move from T&E"
+      },
+      {
+        "idx": 1,
+        "account": "6310",
+        "debit": "0.00",
+        "credit": "25000.00",
+        "memo": "Reverse from T&E"
+      }
+    ],
+    "findings": [
+      {
+        "code": "UNBALANCED",
+        "severity": "ERROR",
+        "subject": "JE-002",
+        "message": "Debits 28,500.00 do not equal credits 25,000.00; the difference is 3,500.00.",
+        "evidence": {
+          "debits": "28500.00",
+          "credits": "25000.00",
+          "diff": "3500.00"
+        },
+        "options": [
+          "Credit side should total 28,500.00 (raise a credit by 3,500.00)",
+          "Debit side should total 25,000.00 (reduce the larger side)",
+          "A third line of 3,500.00 is missing; ask the preparer which account"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "JE-003",
+    "description": "FX revaluation of EUR cash balance to period-end rate",
+    "source": "FX reval calc",
+    "date": "2024-12-31",
+    "status": "ACCEPTED_WITH_FLAGS",
+    "debits": "11200.00",
+    "credits": "11200.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "1110",
+        "debit": "11200.00",
+        "credit": "0.00",
+        "memo": "EUR cash uplift"
+      },
+      {
+        "idx": 1,
+        "account": "7310",
+        "debit": "0.00",
+        "credit": "11200.00",
+        "memo": "Unrealized FX gain"
+      }
+    ],
+    "findings": [
+      {
+        "code": "FX_REVAL_NOT_TIED",
+        "severity": "WARN",
+        "subject": "JE-003",
+        "message": "Booked reval of 11,200.00 does not tie to any recomputation from the rate table: EUR 825,400.00 x (period_end 1.095 - period_average 1.082) = 10,730.20; EUR 825,400.00 x (period_end 1.095 - opening 1.071) = 19,809.60. GBP cash (412,300.00) has no period-end rate in fx_rates.csv so it cannot be revalued or checked at all. Also confirm the TB's EUR balance was not already revalued, or this double counts.",
+        "evidence": {
+          "booked": "11200.00",
+          "recomputed": {
+            "EUR 825,400.00 x (period_end 1.095 - period_average 1.082)": "10730.20",
+            "EUR 825,400.00 x (period_end 1.095 - opening 1.071)": "19809.60"
+          }
+        },
+        "options": [
+          "Accept as booked (immaterial, flagged)",
+          "Replace with recomputed amount once the preparer confirms the base rate",
+          "Obtain GBP period-end rate and revalue both currencies"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "JE-004",
+    "description": "Bad debt provision top-up",
+    "source": "AR aging review",
+    "date": "2024-12-31",
+    "status": "ACCEPTED",
+    "debits": "45000.00",
+    "credits": "45000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6600",
+        "debit": "45000.00",
+        "credit": "0.00",
+        "memo": "Top-up reserve"
+      },
+      {
+        "idx": 1,
+        "account": "1121",
+        "debit": "0.00",
+        "credit": "45000.00",
+        "memo": "Increase allowance"
+      }
+    ],
+    "findings": []
+  },
+  {
+    "id": "JE-005",
+    "description": "Reclass conference travel from old code",
+    "source": "AP team",
+    "date": "2024-12-15",
+    "status": "QUARANTINED",
+    "debits": "18500.00",
+    "credits": "18500.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6315",
+        "debit": "18500.00",
+        "credit": "0.00",
+        "memo": "Conf travel"
+      },
+      {
+        "idx": 1,
+        "account": "6310",
+        "debit": "0.00",
+        "credit": "18500.00",
+        "memo": "Out of T&E"
+      }
+    ],
+    "findings": [
+      {
+        "code": "UNKNOWN_ACCOUNT",
+        "severity": "ERROR",
+        "subject": "JE-005",
+        "message": "Line 1 posts to account 6315, which is not in the chart of accounts.",
+        "evidence": {
+          "account": "6315",
+          "line": 1
+        },
+        "options": [
+          "Use existing 6310 Travel and Entertainment (heuristic score 0.61) - note: may make the entry a no-op if it is already the other leg",
+          "Request a COA change to create 6315 (needs owner approval)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "JE-006",
+    "description": "Depreciation catch-up \u2014 Q4",
+    "source": "Fixed asset register",
+    "date": "2024-12-31",
+    "status": "ACCEPTED_WITH_FLAGS",
+    "debits": "215000.00",
+    "credits": "215000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6500",
+        "debit": "215000.00",
+        "credit": "0.00",
+        "memo": "Q4 dep"
+      },
+      {
+        "idx": 1,
+        "account": "1211",
+        "debit": "0.00",
+        "credit": "215000.00",
+        "memo": "Accum dep"
+      }
+    ],
+    "findings": [
+      {
+        "code": "DEPR_ALREADY_FULL",
+        "severity": "WARN",
+        "subject": "JE-006",
+        "message": "Before this entry, accumulated depreciation already grew by 850,000.00 since the prior period, exactly equal to booked depreciation expense (850,000.00). This 215,000.00 'catch-up' therefore sits on top of a complete quarter (25.3% extra). Confirm against the fixed-asset register that it is not a duplicate.",
+        "evidence": {
+          "acc_dep_movement": "850000.00",
+          "expense": "850000.00",
+          "catch_up": "215000.00"
+        },
+        "options": []
+      }
+    ]
+  },
+  {
+    "id": "JE-007",
+    "description": "Deferred tax true-up",
+    "source": "Tax provision memo",
+    "date": "2024-12-31",
+    "status": "ACCEPTED",
+    "debits": "38000.00",
+    "credits": "38000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "8200",
+        "debit": "38000.00",
+        "credit": "0.00",
+        "memo": "DTA reduction"
+      },
+      {
+        "idx": 1,
+        "account": "1250",
+        "debit": "0.00",
+        "credit": "38000.00",
+        "memo": "Reduce DTA"
+      }
+    ],
+    "findings": []
+  },
+  {
+    "id": "JE-008",
+    "description": "Intercompany settlement \u2014 UK sub",
+    "source": "IC reconciliation",
+    "date": "2024-12-30",
+    "status": "QUARANTINED",
+    "debits": "320000.00",
+    "credits": "320000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "2170",
+        "debit": "320000.00",
+        "credit": "0.00",
+        "memo": "IC payable down"
+      },
+      {
+        "idx": 1,
+        "account": "2170",
+        "debit": "0.00",
+        "credit": "320000.00",
+        "memo": "IC payable up"
+      }
+    ],
+    "findings": [
+      {
+        "code": "SAME_ACCOUNT_NET_ZERO",
+        "severity": "ERROR",
+        "subject": "JE-008",
+        "message": "All lines use account(s) 2170, and debits and credits net to zero for that account. This is a same-account, net-zero entry that appears to have no accounting effect. It is quarantined for review; this pattern alone does not prove a circular intercompany transaction.",
+        "evidence": {
+          "net": {
+            "2170": "0.00"
+          },
+          "account_count": 1
+        },
+        "options": [
+          "Confirm the intended business event and whether the entry should have any accounting effect.",
+          "If this is an intercompany settlement, obtain the counterparty/entity evidence and identify the actual settlement account before resubmitting."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "JE-009",
+    "description": "Accrue legal fees for ongoing litigation",
+    "source": "Legal memo dated 2024-12-29",
+    "date": "2024-12-31",
+    "status": "ACCEPTED",
+    "debits": "75000.00",
+    "credits": "75000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "6400",
+        "debit": "75000.00",
+        "credit": "0.00",
+        "memo": "Legal accrual"
+      },
+      {
+        "idx": 1,
+        "account": "2120",
+        "debit": "0.00",
+        "credit": "75000.00",
+        "memo": "Accrued legal"
+      }
+    ],
+    "findings": []
+  },
+  {
+    "id": "JE-010",
+    "description": "Reclass long-term debt current portion",
+    "source": "Treasury schedule",
+    "date": "2024-12-31",
+    "status": "ACCEPTED",
+    "debits": "200000.00",
+    "credits": "200000.00",
+    "lines": [
+      {
+        "idx": 0,
+        "account": "2210",
+        "debit": "200000.00",
+        "credit": "0.00",
+        "memo": "Out of LT debt"
+      },
+      {
+        "idx": 1,
+        "account": "2140",
+        "debit": "0.00",
+        "credit": "200000.00",
+        "memo": "Into current"
+      }
+    ],
+    "findings": []
+  }
+]

@@ -1,0 +1,11 @@
+[project]
+name = "closeagent"
+version = "0.1.0"
+requires-python = ">=3.9"
+[project.optional-dependencies]
+llm = ["anthropic"]
+test = ["pytest"]
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
